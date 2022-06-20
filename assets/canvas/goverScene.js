@@ -40,16 +40,16 @@ goverScene.prototype.preload = function () {
 };
 
 goverScene.prototype.create = function () {
-	var _goverScene1 = this.add.sprite(0.0, 0.0, 'goverScene');
+	var _goverScene1 = this.add.sprite(0.0, 0.0, 'finalBg');
 	
-	var _LevelReached = this.add.bitmapText(448.0, 448.0, 'PixelFont', 'level', 64);
+	//var _LevelReached = this.add.bitmapText(448.0, 448.0, 'PixelFont', 'level', 64);
 	
 	
 	
 	// fields
 	
-	this.fGoverScene1 = _goverScene1;
-	this.fLevelReached = _LevelReached;
+//	this.fGoverScene1 = _goverScene1;
+//	this.fLevelReached = _LevelReached;
 		this.myCreate();
 	
 };
@@ -60,10 +60,12 @@ goverScene.prototype.myCreate = function () {
 	var allSounds = AllSounds_proto.create(this);
 
 	allSounds.ending.play("ending",0, 0.5, false, true);
-	this.fLevelReached.text = this._levelReached;
-	this.fGoverScene1.inputEnabled = true;
-	this.fGoverScene1.events.onInputDown.add﻿(this.iniciarJuego, this);
-	
+//	this.fLevelReached.text = this._levelReached;
+//	this.fGoverScene1.inputEnabled = true;
+//	this.fGoverScene1.events.onInputDown.add(this.iniciarJuego, this);
+
+
+	Rune.gameOver();
 };
 
 goverScene.prototype.iniciarJuego = function () {

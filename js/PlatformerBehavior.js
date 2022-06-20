@@ -152,9 +152,9 @@
 		
 		}else{
 
-
 	
-
+		
+		
 		this._state.game.state.start("GoverScene",true, true, this._state.state.getCurrentState().LevelNumber); //pantalla de game over
 
 		}		

@@ -53,6 +53,8 @@ window.onload = function() {
 			document.getElementById("turn").style.display="none";
 		}
 	}
+
+
 	
 	// Add the States your game has.
 	
@@ -83,26 +85,108 @@ window.onload = function() {
 	game.state.add("Level20", Level20);
 	game.state.add("Level21", Level21);
 	game.state.start("Play",true,true);
+
 	
+	game.pauseGame=function(){
+		game.paused = true;
+		
+	}
+
+	game.resumeGame=function(){
+		game.paused = false;
+
+	}
+
+	game.restartGame=function(){
+
+		console.log("wanna restart");
+		game.state.start("Level", true, true, 3);
+	}
+
+	game.getScore = function(){
+		var wichLevel=0;
+		switch(game.state.current){
+			case "Level":
+				console.log("level 1");
+				wichLevel=1;
+			break;
+			case "Level2":
+				wichLevel=2;
+			break;
+			case "Level3":
+				wichLevel=3
+			break;
+			case "Level4":
+				wichLevel=4;
+			break;
+			case "Level5":
+				wichLevel=5;
+			break;
+			case "Level6":
+				wichLevel=6;
+			break;
+			case "Level7":
+				wichLevel=7;
+			break;
+			case "Level8":
+				wichLevel=8;
+			break;
+			case "Level9":
+				wichLevel=9;
+			break;
+			case "Level10":
+				wichLevel=10;
+			break;
+			case "Level11":
+				wichLevel=11;
+			break;
+			case "Level12":
+				wichLevel=12;
+			break;
+			case "Level13":
+				wichLevel=13;
+			break;
+
+			case "Level14":
+				wichLevel=14;
+			break;
+			case "Level15":
+				wichLevel=15;
+			break;
+			case "Level16":
+				wichLevel=16;
+			break;
+			case "Level17":
+				wichLevel=17;
+			break;
+			case "Level18":
+				wichLevel=18;
+			break;
+			case "Level19":
+				wichLevel=19;
+			break;
+			case "Level20":
+				wichLevel=20;
+			break;
+			case "Level21":
+				wichLevel=20;
+			break;
+			default:
+				wichLevel=0;
+			break;
+		}
+		return wichLevel;
+	}
 
 
-	  
-};	
 
 
-// Setup functions for starting the game etc.
-function restartGame() {
-	// Reset score w/o changing container orientation by removing full rotations
-
-  
-	// Start actual gameplay
-	isAnimating = true
-  }
   function pauseGame() {
 	isAnimating = false
 	isPlaying = false
   }
   function resumeGame() {
+	  console.log("resuming stuff")
 	isAnimating = true
 	isPlaying = true
   }
@@ -111,17 +195,21 @@ function restartGame() {
 
 	Rune.gameOver()
   }
-  function getScore() {
-	return score=0;
-  }
+
   
   // Initialize Rune SDK with the start/pause/resume functions.
   // Rune will call startGame() to let this game know to start the gameplay.
   Rune.init({
 	
-	restartGame,
-	pauseGame,
-	resumeGame,
-	getScore,
+	restartGame:game.restartGame,
+	pauseGame:game.pauseGame,
+	resumeGame:game.resumeGame,
+	getScore:game.getScore,
   })
   
+
+  const challengeNumber = Rune.getChallengeNumber()
+  const mapIds = [1, 2, 3, 4, 5, 6, 7,8,9,10,11,12,13,14,15,16,17,18,19,20] // Define your fixed list of maps
+
+};	
+

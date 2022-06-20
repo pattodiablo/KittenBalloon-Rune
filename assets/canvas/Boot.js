@@ -97,7 +97,7 @@ Boot.prototype.myInit = function () {
 Boot.prototype.myCreate = function () {
 
 
-	this.state.start("Level20", true, true, 3);
+	this.state.start("Level", true, true, 3);
 };
 
 

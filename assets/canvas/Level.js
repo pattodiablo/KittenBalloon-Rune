@@ -160,6 +160,7 @@ Level.prototype.myCreate = function () {
 
 	this.behavior = new PlatformerBehavior(this, "Level2",this.fScreenLevel, this.fPlayer, this.fPlataformas,this.fPlataformasMove, this.fEnemies, this.fEnemyL2,this.fEnemyL3, this.fCoins, vidasTotales,this.fLives, this.fGreatJobScreen,this.fPauseBtn , allSounds);
 	this.fPauseBtn.visible=false;
+	this.state.game.paused = true;
 };
 
 
