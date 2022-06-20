@@ -71,7 +71,7 @@ IntroScene.prototype.myInit = function () {
 IntroScene.prototype.myCreate = function () {
 	this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
 	this.fIntroScene1.inputEnabled = true;
-	this.fIntroScene1.events.onInputDown.add﻿(this.iniciarJuego, this);
+	this.fIntroScene1.events.onInputDown.add(this.iniciarJuego, this);
 	
 	
 };

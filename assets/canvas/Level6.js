@@ -153,6 +153,7 @@ Level6.prototype.myCreate = function () {
 	var allSounds = AllSounds_proto.create(this);
 	this.fPixelFont.text = this.LevelNumber;
 	this.behavior = new PlatformerBehavior(this, "Level7",this.fScreenLevel, this.fPlayer, this.fPlataformas,this.fPlataformasMove, this.fEnemies, this.fEnemyL2,this.fEnemyL3, this.fCoins, vidasTotales,this.fLives, this.fGreatJobScreen,this.fPauseBtn , allSounds);
+	this.fPauseBtn.visible=false;
 };
 
 

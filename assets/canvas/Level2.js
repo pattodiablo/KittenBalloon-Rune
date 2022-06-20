@@ -50,7 +50,7 @@ Level2.prototype.create = function () {
 	var _background = this.add.sprite(0.0, 0.0, 'background');
 	
 	this.add.sprite(-160.0, 807.0, 'grass');
-	
+
 	var _Plataformas = this.add.group();
 	
 	var _platformTipo = new Platform1(this.game, 477.0, 326.0);
@@ -159,7 +159,7 @@ Level2.prototype.myCreate = function () {
 	//var allSounds = this.loadSounds();
 
 	this.behavior = new PlatformerBehavior(this, "Level3",this.fScreenLevel	, this.fPlayer, this.fPlataformas,this.fPlataformasMove, this.fEnemies, this.fEnemyL2,this.fEnemyL3, this.fCoins, vidasTotales,this.fLives, this.fGreatJobScreen,this.fPauseBtn , allSounds);
-
+	this.fPauseBtn.visible=false;
 };
 
 

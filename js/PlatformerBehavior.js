@@ -178,20 +178,7 @@
 	}
 		
 //poner intro musical dependiendo del nivel
-	if( this._state.state.getCurrentState().key == "Level6" || this._state.state.getCurrentState().key == "Level9" || this._state.state.getCurrentState().key == "Level14" || this._state.state.getCurrentState().key == "Level18"  ){
 
-		//código para publicidad
-		if(!showingAd){
-	
-			this._state.game.paused = true;
-				showAd();
-
-			}else{
-		this._state.game.paused = false;
-
-			}
-
-	}
 		
 
 	function soundStopped(sound) {	}

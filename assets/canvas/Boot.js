@@ -87,7 +87,7 @@ Boot.prototype.fileComplete = function (progress, cacheKey, success, totalLoaded
 };
 
 Boot.prototype.myInit = function () {
-	console.log("Game By pattodiablo");
+	console.log("Game By Weveana");
 	this.game.sound.boot();
 	this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
 	this.scale.setUserScale(0.5,0.5,0,0);
@@ -96,7 +96,8 @@ Boot.prototype.myInit = function () {
 
 Boot.prototype.myCreate = function () {
 
-	this.game.state.start("IntroScene", true, true);
+
+	this.state.start("Level20", true, true, 3);
 };
 
 

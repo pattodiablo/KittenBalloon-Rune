@@ -148,6 +148,7 @@ Level.prototype.myInit = function () {
 	this.LevelNumber = 1;
 	this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
 	this.game.sound.boot();
+	
 };
 
 
@@ -158,7 +159,7 @@ Level.prototype.myCreate = function () {
 	//var allSounds = this.loadSounds();
 
 	this.behavior = new PlatformerBehavior(this, "Level2",this.fScreenLevel, this.fPlayer, this.fPlataformas,this.fPlataformasMove, this.fEnemies, this.fEnemyL2,this.fEnemyL3, this.fCoins, vidasTotales,this.fLives, this.fGreatJobScreen,this.fPauseBtn , allSounds);
-
+	this.fPauseBtn.visible=false;
 };
 
 
