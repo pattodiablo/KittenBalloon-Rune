@@ -23,11 +23,10 @@ Level9.prototype.constructor = Level9;
 
 Level9.prototype.init = function (vidas) {
 	
-	
 
 	vidasTotales = vidas;
 	
-		this.LevelNumber = 8;
+		this.LevelNumber = 9;
 	
 	this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
 	this.scale.pageAlignHorizontally = true;

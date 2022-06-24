@@ -477,7 +477,7 @@
 		
 
 			this._player.sounds.finLevel.play("finLevel",0, 0.5, false, true);
-			this._state.add.tween(this._winScreen).to({ y: 0 ﻿},500, Phaser.Easing.Bounce.Out, true);
+			this._state.add.tween(this._winScreen).to({ y: 0 },500, Phaser.Easing.Bounce.Out, true);
 		
 		};
 

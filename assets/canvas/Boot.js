@@ -95,9 +95,70 @@ Boot.prototype.myInit = function () {
 };
 
 Boot.prototype.myCreate = function () {
+console.log(this.game.challengeLevel);
+	switch(this.game.challengeLevel){
+		case 2:
+			this.state.start("Level2", true, true, 3);
+		break;
+		case 3:
+			this.state.start("Level3", true, true, 3);
+		break;
+		case 4:
+			this.state.start("Level4", true, true, 3);
+		break;
+		case 5:
+			this.state.start("Level5", true, true, 3);
+		break;
+		case 6:
+			this.state.start("Level6", true, true, 3);
+		break;
+		case 7:
+			this.state.start("Level7", true, true, 3);
+		break;
+		case 8:
+			this.state.start("Level8", true, true, 3);
+		break;
+		case 9:
+			this.state.start("Level9", true, true, 3);
+		break;
+		case 10:
+			this.state.start("Level10", true, true, 3);
+		break;
+		case 11:
+			this.state.start("Level11", true, true, 3);
+		break;
+		case 12:
+			this.state.start("Level12", true, true, 3);
+		break;
+		case 13:
+			this.state.start("Level13", true, true, 3);
+		break;
+		case 14:
+			this.state.start("Level14", true, true, 3);
+		break;
+		case 15:
+			this.state.start("Level15", true, true, 3);
+		break;
+		case 16:
+			this.state.start("Level16", true, true, 3);
+		break;
+		case 17:
+			this.state.start("Level17", true, true, 3);
+		break;
+		case 18:
+			this.state.start("Level18", true, true, 3);
+		break;
+		case 19:
+			this.state.start("Level19", true, true, 3);
+		break;
+		case 20:
+			this.state.start("Level20", true, true, 3);
+		break;
+		default:
+			this.state.start("Level", true, true, 3);
+		break;
+	}
 
-
-	this.state.start("Level", true, true, 3);
 };
 
 
