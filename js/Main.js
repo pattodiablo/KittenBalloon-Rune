@@ -87,11 +87,11 @@ window.onload = function() {
 
 	const mapIds = [1,2, 3, 4, 5, 6, 7,8,9,10,11,12,13,14,15,16,17,18,19,20] // Define your fixed list of maps
 
-	const challengeNumber = Rune.getChallengeNumber() // Get today's challenge number
+	//const challengeNumber = Rune.getChallengeNumber() // Get today's challenge number
 	
 	//const mapId = mapIds[challengeNumber % mapIds.length] // Get deterministic mapId
 
-	game.challengeLevel=challengeNumber;
+	game.challengeLevel=1;
 	game.state.start("Play",true,true);
 
 	
@@ -190,7 +190,7 @@ window.onload = function() {
 
 
   function pauseGame() {
-	isAnimating = false
+	isAnimating = true
 	isPlaying = false
   }
   function resumeGame() {
@@ -207,6 +207,7 @@ window.onload = function() {
   
   // Initialize Rune SDK with the start/pause/resume functions.
   // Rune will call startGame() to let this game know to start the gameplay.
+  /*
   Rune.init({
 	
 	restartGame:game.restartGame,
@@ -214,7 +215,7 @@ window.onload = function() {
 	resumeGame:game.resumeGame,
 	getScore:game.getScore,
   })
-  
+  */
 
 };	
 
